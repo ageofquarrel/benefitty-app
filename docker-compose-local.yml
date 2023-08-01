@@ -1,0 +1,51 @@
+version: '3'
+
+networks:
+  internal:
+
+services:
+  nginx:
+    image: nginx
+    container_name: app_nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/var/www/app:cached
+      - ./docker-compose-local/nginx/conf.d/:/etc/nginx/conf.d:cached
+    links:
+      - php
+    depends_on:
+      - php
+      - db
+    networks:
+      - internal
+  
+  php:
+    build:
+      context: .
+      dockerfile: ./docker-compose-local/php/Dockerfile
+    container_name: app_php
+    volumes:
+      - ./:/var/www/app:cached
+    ports:
+      - "9001:9000"
+    depends_on:
+      - db
+    networks: 
+      - internal
+
+  db:
+    image: postgres:13-alpine
+    container_name: app_postgres
+    restart: unless-stopped
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./docker-compose-local/postgres:/var/lib/postgresql/data:cached
+    environment:
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_DATABASE}
+      POSTGRES_HOST_AUTH_METHOD: "trust"
+    networks:
+      - internal

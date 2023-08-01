@@ -1,0 +1,66 @@
+2023-08-01 09:16:05,959 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-08-01 09:16:05,961 INFO supervisord started with pid 1
+2023-08-01 09:16:06,964 INFO spawned: 'fpm' with pid 7
+2023-08-01 09:16:06,967 INFO spawned: 'queue_00' with pid 8
+2023-08-01 09:16:08,029 INFO success: fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-08-01 09:16:08,029 INFO success: queue_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-08-01 09:22:33,469 WARN received SIGQUIT indicating exit request
+2023-08-01 09:22:33,469 INFO waiting for fpm, queue_00 to die
+2023-08-01 09:22:33,473 WARN stopped: queue_00 (terminated by SIGTERM)
+2023-08-01 09:22:33,478 INFO stopped: fpm (exit status 0)
+2023-08-01 09:22:39,770 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-08-01 09:22:39,771 INFO supervisord started with pid 1
+2023-08-01 09:22:40,774 INFO spawned: 'fpm' with pid 7
+2023-08-01 09:22:40,777 INFO spawned: 'queue_00' with pid 8
+2023-08-01 09:22:41,803 INFO success: fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-08-01 09:22:41,803 INFO success: queue_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-08-01 09:23:18,847 WARN received SIGQUIT indicating exit request
+2023-08-01 09:23:18,848 INFO waiting for fpm, queue_00 to die
+2023-08-01 09:23:18,852 WARN stopped: queue_00 (terminated by SIGTERM)
+2023-08-01 09:23:18,858 INFO stopped: fpm (exit status 0)
+2023-08-01 09:23:32,733 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-08-01 09:23:32,735 INFO supervisord started with pid 1
+2023-08-01 09:23:33,738 INFO spawned: 'fpm' with pid 7
+2023-08-01 09:23:33,740 INFO spawned: 'queue_00' with pid 8
+2023-08-01 09:23:34,765 INFO success: fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-08-01 09:23:34,765 INFO success: queue_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-08-01 09:24:26,824 WARN received SIGQUIT indicating exit request
+2023-08-01 09:24:26,825 INFO waiting for fpm, queue_00 to die
+2023-08-01 09:24:26,829 WARN stopped: queue_00 (terminated by SIGTERM)
+2023-08-01 09:24:26,835 INFO stopped: fpm (exit status 0)
+2023-08-01 09:26:38,081 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-08-01 09:26:38,083 INFO supervisord started with pid 1
+2023-08-01 09:26:39,086 INFO spawned: 'fpm' with pid 7
+2023-08-01 09:26:39,089 INFO spawned: 'queue_00' with pid 8
+2023-08-01 09:26:40,116 INFO success: fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-08-01 09:26:40,116 INFO success: queue_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-08-01 09:29:34,315 WARN received SIGQUIT indicating exit request
+2023-08-01 09:29:34,316 INFO waiting for fpm, queue_00 to die
+2023-08-01 09:29:34,321 WARN stopped: queue_00 (terminated by SIGTERM)
+2023-08-01 09:29:34,327 INFO stopped: fpm (exit status 0)
+2023-08-01 09:31:20,582 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-08-01 09:31:20,583 INFO supervisord started with pid 1
+2023-08-01 09:31:21,586 INFO spawned: 'fpm' with pid 7
+2023-08-01 09:31:21,589 INFO spawned: 'queue_00' with pid 8
+2023-08-01 09:31:22,612 INFO success: fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-08-01 09:31:22,613 INFO success: queue_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-08-01 09:32:54,729 WARN received SIGQUIT indicating exit request
+2023-08-01 09:32:54,730 INFO waiting for fpm, queue_00 to die
+2023-08-01 09:32:54,734 WARN stopped: queue_00 (terminated by SIGTERM)
+2023-08-01 09:32:54,739 INFO stopped: fpm (exit status 0)
+2023-08-01 09:35:07,355 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-08-01 09:35:07,356 INFO supervisord started with pid 1
+2023-08-01 09:35:08,359 INFO spawned: 'fpm' with pid 7
+2023-08-01 09:35:08,362 INFO spawned: 'queue_00' with pid 8
+2023-08-01 09:35:09,401 INFO success: fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-08-01 09:35:09,401 INFO success: queue_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-08-01 09:40:54,779 WARN received SIGQUIT indicating exit request
+2023-08-01 09:40:54,780 INFO waiting for fpm, queue_00 to die
+2023-08-01 09:40:54,784 WARN stopped: queue_00 (terminated by SIGTERM)
+2023-08-01 09:40:54,791 INFO stopped: fpm (exit status 0)
+2023-08-01 09:42:55,377 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-08-01 09:42:55,631 INFO supervisord started with pid 1
+2023-08-01 09:42:56,635 INFO spawned: 'fpm' with pid 7
+2023-08-01 09:42:56,638 INFO spawned: 'queue_00' with pid 8
+2023-08-01 09:42:57,737 INFO success: fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-08-01 09:42:57,737 INFO success: queue_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
