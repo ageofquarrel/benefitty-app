@@ -24,7 +24,7 @@ class GeoController extends Controller
 
             return response()->json('Задача добавлена в очередь');
         } catch (Exception $e) {
-            return response()->json('Ошибка постановки щадачи в очередь');
+            return response()->json('Ошибка постановки задачи в очередь');
         }
     }
 
