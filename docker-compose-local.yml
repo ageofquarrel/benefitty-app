@@ -39,9 +39,9 @@ services:
     container_name: app_postgres
     restart: unless-stopped
     ports:
-      - "5433:5432"
+      - "5432:5432"
     volumes:
-      - ./docker-compose-local/postgres:/var/lib/postgresql/data:cached
+      - ./docker-compose-local/postgres
     environment:
       POSTGRES_USER: ${DB_USERNAME}
       POSTGRES_PASSWORD: ${DB_PASSWORD}

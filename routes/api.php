@@ -1,11 +1,9 @@
 <?php
 
+use App\Http\Controllers\GeoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthorizationController;
-use App\Http\Controllers\Goods\GoodBuyController;
-use App\Http\Controllers\Goods\GoodRentController;
-use App\Http\Controllers\Goods\GoodController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,15 +17,13 @@ use App\Http\Controllers\Goods\GoodController;
 */
 
 Route::post('/auth', [AuthorizationController::class, 'auth']);
+Route::post('/register', [AuthorizationController::class, 'register']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
 Route::middleware('auth:sanctum')->group(function () { 
-    Route::post('/good/buy', [GoodBuyController::class, 'index']);
-    Route::post('/good/rent', [GoodRentController::class, 'index']);
-    Route::post('/good/rent/extend', [GoodRentController::class, 'extend']);
-    Route::get('/good/history', [GoodController::class, 'history']);
-    Route::get('/good/status', [GoodController::class, 'status']);
+    Route::post('/save-coordinates', [GeoController::class, 'saveCoordinates']);
+    Route::get('/get-path', [GeoController::class, 'getPath']);
 });

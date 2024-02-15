@@ -3,9 +3,11 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use App\Http\Requests\RegistrationRequest;
 
-class GoodBuyRequest extends FormRequest
+class AuthorizationRequest extends FormRequest
 {
+
     /**
      * Get the validation rules that apply to the request.
      *
@@ -14,9 +16,8 @@ class GoodBuyRequest extends FormRequest
     public function rules()
     {
         return [
-            'user_id'   => 'required|integer|exists:users,id',
-            'good_id'   => 'required|integer|exists:goods,id',
-            'price'     => 'required|integer'
+            'email' => 'required|email',
+            'password'=> 'required|string'
         ];
     }
 }

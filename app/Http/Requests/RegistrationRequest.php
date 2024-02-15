@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class GoodRentRequest extends FormRequest
+class RegistrationRequest extends FormRequest
 {
     /**
      * Get the validation rules that apply to the request.
@@ -14,9 +14,9 @@ class GoodRentRequest extends FormRequest
     public function rules()
     {
         return [
-            'user_id'       => 'required|integer|exists:users,id',
-            'good_id'       => 'required|integer|exists:goods,id',
-            'rent_hours'    => 'required|integer'
+            'email' => 'required|email',
+            'name' => 'required|string',
+            'password'=> 'required|string|min:6'
         ];
     }
 }

@@ -1,0 +1,234 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "Swagger Benefitty",
+      "description": "Документация по API",
+      "termsOfService": "http://swagger.io/terms/",
+      "contact": {
+        "name": "Swagger API Team"
+      },
+      "license": {
+        "name": "MIT"
+      }
+    },
+    "basePath": "/swagger",
+    "schemes": [
+      "http"
+    ],
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "paths": {
+      "/register": {
+        "post": {
+          "description": "Регистрация",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "email",
+              "in": "body",
+              "description": "email пользователя",
+              "required": true,
+              "type": "string"
+            },
+            {
+                "name": "name",
+                "in": "body",
+                "description": "Имя пользователя",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "password",
+                "in": "body",
+                "description": "Пароль пользователя",
+                "required": true,
+                "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Возвращает accessToken и refreshToken",
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/Register"
+                }
+              }
+            }
+          }
+        }
+      },
+      "/auth": {
+        "post": {
+          "description": "Авторизация",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "email",
+              "in": "body",
+              "description": "email пользователя",
+              "required": true,
+              "type": "string"
+            },
+            {
+                "name": "password",
+                "in": "body",
+                "description": "Пароль пользователя",
+                "required": true,
+                "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Возвращает accessToken и refreshToken",
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/Register"
+                }
+              }
+            }
+          }
+        }
+      },
+      "/save-coordinates": {
+        "post": {
+          "description": "Сохранение координат",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "latitude",
+              "in": "body",
+              "description": "Широта",
+              "required": true,
+              "type": "string",
+              "example": "45.720306"
+            },
+            {
+                "name": "longitude",
+                "in": "body",
+                "description": "Долгота",
+                "required": true,
+                "type": "string",
+                "example": "31.766046"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Возвращает ответ о постановке задачи в очередь",
+              "schema": {
+                "type": "string",
+                "example": "Задача добавлена в очередь"
+              }
+            },
+            "400": {
+                "description": "Bad Request",
+                "schema": {
+                  "type": "string"
+                }
+            },
+            "401": {
+                "description": "Unauthorized",
+                "schema": {
+                  "type": "string"
+                }
+            }
+          }
+        }
+      },
+      "/api/get-path": {
+        "get": {
+          "description": "Получение маршрута",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "dateFrom",
+              "in": "body",
+              "description": "Дата от",
+              "required": true,
+              "type": "date",
+              "example": "2024-02-15 12:38:35"
+            },
+            {
+                "name": "dateTo",
+                "in": "body",
+                "description": "Дата до",
+                "required": true,
+                "type": "string",
+                "example": "2024-02-16 00:00:00"
+            }
+          ],
+          "responses": {
+            "200": {
+                "description": "Возвращает массив адресов с координатами",
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/Path"
+                  }
+                }
+            },
+            "400": {
+                "description": "Bad Request",
+                "schema": {
+                  "type": "string"
+                }
+            },
+            "401": {
+                "description": "Unauthorized",
+                "schema": {
+                  "type": "string"
+                }
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "Register": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string"
+          },
+          "refresh_token": {
+            "type": "string"
+          }
+        }
+      },
+      "Path": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 1
+          },
+          "latitude": {
+            "type": "string",
+            "example": "24.7214547"
+          },
+          "longitude": {
+            "type": "string",
+            "example": "124.76647"
+          },
+          "address": {
+            "type": "string",
+            "example": "Россия, Краснодарский край, Новороссийск, улица Видова, 82"
+          }
+        }
+      }
+    }
+  }

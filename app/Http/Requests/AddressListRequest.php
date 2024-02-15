@@ -4,9 +4,8 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class GoodStatusRequest extends FormRequest
+class AddressListRequest extends FormRequest
 {
-
     /**
      * Get the validation rules that apply to the request.
      *
@@ -15,7 +14,8 @@ class GoodStatusRequest extends FormRequest
     public function rules()
     {
         return [
-            'code' => 'required|string|exists:good_user_properties,code'
+            'dateFrom' => 'required|date',
+            'dateTo'   => 'required|date',
         ];
     }
 }
