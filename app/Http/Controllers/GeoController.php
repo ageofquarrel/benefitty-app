@@ -16,6 +16,7 @@ class GeoController extends Controller
     public function __construct(
         private GeoInterface $yandexGeoService
     ) {}
+    
     public function saveCoordinates(CoordinateRequest $request): JsonResponse
     {
         try {
